@@ -13,7 +13,7 @@ use tracing_subscriber::{
 };
 
 /// Converts a `tracing` log level to a `proc_macro` log level.
-fn convert_level(level: Level) -> proc_macro::Level {
+const fn convert_level(level: Level) -> proc_macro::Level {
   match level {
     Level::ERROR => proc_macro::Level::Error,
     Level::WARN => proc_macro::Level::Warning,
@@ -29,7 +29,7 @@ pub struct RustcDiagnosticsWriter {
 }
 
 impl RustcDiagnosticsWriter {
-  fn new(level: Level) -> Self {
+  const fn new(level: Level) -> Self {
     Self { level }
   }
 }
