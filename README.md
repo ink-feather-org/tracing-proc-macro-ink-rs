@@ -1,5 +1,9 @@
 # tracing_proc_macro_rs
 
+[![docs.rs](https://docs.rs/tracing_proc_macro_rs/badge.svg)](https://docs.rs/tracing_proc_macro_rs)
+[![crates.io](https://img.shields.io/crates/v/tracing_proc_macro_rs.svg)](https://crates.io/crates/tracing_proc_macro_rs)
+[![rustc](https://img.shields.io/badge/rustc-nightly-lightgrey)](https://doc.rust-lang.org/nightly/std/)
+
 `tracing_proc_macro_rs` provides `tracing` integration for the `rustc` compilers `proc_macro` crate.
 It only works in `proc-macro = true` crates and it is nightly only.
 
