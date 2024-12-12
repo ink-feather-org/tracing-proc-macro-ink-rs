@@ -1,0 +1,78 @@
+[package]
+name = "tracing_proc_macros_rs"
+edition = "2024"
+description = "Provides `tracing` integration for the `rustc` compilers `proc_macro` crate."
+license = "MIT OR Apache-2.0"
+readme = "README.md"
+repository = "https://github.com/ink-feather-org/tracing_proc_macros_rs"
+homepage = "https://github.com/ink-feather-org/tracing_proc_macros_rs"
+categories = ["development-tools::debugging", "development-tools::profiling"]
+keywords = ["logging", "tracing", "metrics", "proc-macro"]
+
+[dependencies]
+tracing = "0.1"
+tracing-subscriber = { version = "0.3", default-features = false, features = [
+  "fmt",
+] }
+
+[features]
+default = ["default-setup"]
+default-setup = [
+  "tracing-subscriber/std",
+  "tracing-subscriber/env-filter",
+  "tracing-subscriber/time",
+  "tracing-subscriber/local-time",
+]
+
+[lints]
+workspace = true
+
+[package.metadata.docs.rs]
+rustdoc-args = ["-Zunstable-options", "--generate-link-to-definition"]
+all-features = true
+
+# WORKSPACE
+
+[workspace]
+resolver = "2"
+members = ["examples/*"]
+
+[workspace.lints.clippy]
+doc_markdown = "warn"
+manual_let_else = "warn"
+match_same_arms = "warn"
+redundant_closure_for_method_calls = "warn"
+redundant_else = "warn"
+semicolon_if_nothing_returned = "warn"
+type_complexity = "allow"
+undocumented_unsafe_blocks = "warn"
+unwrap_or_default = "warn"
+needless_lifetimes = "allow"
+
+ptr_as_ptr = "warn"
+ptr_cast_constness = "warn"
+ref_as_ptr = "warn"
+
+# see: https://github.com/bevyengine/bevy/pull/15375#issuecomment-2366966219
+too_long_first_doc_paragraph = "allow"
+
+std_instead_of_core = "warn"
+std_instead_of_alloc = "warn"
+alloc_instead_of_core = "warn"
+
+[workspace.lints.rust]
+nonstandard-style = "warn"
+future-incompatible = "warn"
+missing_docs = "warn"
+unused = "warn"
+rust-2024-compatibility = "warn"
+array-into-iter = "warn"
+bare-trait-objects = "warn"
+ellipsis-inclusive-range-patterns = "warn"
+non-fmt-panics = "warn"
+explicit-outlives-requirements = "warn"
+unused-extern-crates = "warn"
+unexpected_cfgs = { level = "warn", check-cfg = ['cfg(docsrs_dep)'] }
+unsafe_code = "deny"
+unsafe_op_in_unsafe_fn = "warn"
+unused_qualifications = "warn"

@@ -1,0 +1,6 @@
+[package]
+name = "example_proc_macro_user"
+edition = "2024"
+
+[dependencies]
+example_proc_macro = { path = "../example_proc_macro" }

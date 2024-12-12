@@ -1,0 +1,11 @@
+[package]
+name = "example_proc_macro"
+edition = "2024"
+
+[lib]
+proc-macro = true
+
+[dependencies]
+tracing_proc_macros_rs = { path = "../.." }
+tracing = "0.1"
+tracing-subscriber = "0.3"
