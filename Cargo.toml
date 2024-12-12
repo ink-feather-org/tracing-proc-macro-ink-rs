@@ -8,6 +8,7 @@ repository = "https://github.com/ink-feather-org/tracing_proc_macros_rs"
 homepage = "https://github.com/ink-feather-org/tracing_proc_macros_rs"
 categories = ["development-tools::debugging", "development-tools::profiling"]
 keywords = ["logging", "tracing", "metrics", "proc-macro"]
+version = "0.1.0"
 
 [dependencies]
 tracing = "0.1"

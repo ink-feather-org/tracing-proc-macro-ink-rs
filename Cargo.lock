@@ -345,7 +345,7 @@ dependencies = [
 
 [[package]]
 name = "tracing_proc_macros_rs"
-version = "0.0.0"
+version = "0.1.0"
 dependencies = [
  "tracing",
  "tracing-subscriber",
