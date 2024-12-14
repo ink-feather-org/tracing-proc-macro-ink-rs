@@ -1,11 +1,11 @@
 [package]
-name = "tracing_proc_macros"
+name = "tracing-proc-macros-ink"
 edition = "2024"
-description = "Provides `tracing` integration for the `rustc` compilers `proc_macro` crate."
+description = "Provides a working tracing integration for logging from within procedural macros."
 license = "MIT OR Apache-2.0"
 readme = "README.md"
-repository = "https://github.com/ink-feather-org/tracing_proc_macros_rs"
-homepage = "https://github.com/ink-feather-org/tracing_proc_macros_rs"
+repository = "https://github.com/ink-feather-org/tracing-proc-macro-ink_rs"
+homepage = "https://github.com/ink-feather-org/tracing-proc-macro-ink_rs"
 categories = ["development-tools::debugging", "development-tools::profiling"]
 keywords = ["logging", "tracing", "metrics", "proc-macro", "nightly"]
 version = "0.1.0"

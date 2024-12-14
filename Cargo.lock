@@ -31,8 +31,8 @@ name = "example_proc_macro"
 version = "0.0.0"
 dependencies = [
  "tracing",
+ "tracing-proc-macros-ink",
  "tracing-subscriber",
- "tracing_proc_macros",
 ]
 
 [[package]]
@@ -325,6 +325,14 @@ dependencies = [
 ]
 
 [[package]]
+name = "tracing-proc-macros-ink"
+version = "0.1.0"
+dependencies = [
+ "tracing",
+ "tracing-subscriber",
+]
+
+[[package]]
 name = "tracing-subscriber"
 version = "0.3.19"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -341,14 +349,6 @@ dependencies = [
  "tracing",
  "tracing-core",
  "tracing-log",
-]
-
-[[package]]
-name = "tracing_proc_macros"
-version = "0.1.0"
-dependencies = [
- "tracing",
- "tracing-subscriber",
 ]
 
 [[package]]
