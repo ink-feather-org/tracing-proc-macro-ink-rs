@@ -47,8 +47,8 @@ The default `default-setup` feature can be disabled with `no-default-features = 
 
 This project is released under either:
 
-- [MIT License](https://github.com/ink-feather-org/tracing-proc-macro-ink_rs/blob/main/LICENSE-MIT)
-- [Apache License (Version 2.0)](https://github.com/ink-feather-org/tracing-proc-macro-ink_rs/blob/main/LICENSE-APACHE)
+- [MIT License](https://github.com/ink-feather-org/tracing-proc-macro-ink-rs/blob/main/LICENSE-MIT)
+- [Apache License (Version 2.0)](https://github.com/ink-feather-org/tracing-proc-macro-ink-rs/blob/main/LICENSE-APACHE)
 
 at your choosing.
 
