@@ -1,11 +1,11 @@
-# tracing_proc_macro
+# tracing-proc-macros-ink
 
-[![docs.rs](https://docs.rs/tracing_proc_macro/badge.svg)](https://docs.rs/tracing_proc_macro)
-[![crates.io](https://img.shields.io/crates/v/tracing_proc_macro.svg)](https://crates.io/crates/tracing_proc_macro)
+[![docs.rs](https://docs.rs/tracing-proc-macros-ink/badge.svg)](https://docs.rs/tracing-proc-macros-ink)
+[![crates.io](https://img.shields.io/crates/v/tracing-proc-macros-ink.svg)](https://crates.io/crates/tracing-proc-macros-ink)
 [![rustc](https://img.shields.io/badge/rustc-nightly-lightgrey)](https://doc.rust-lang.org/nightly/std/)
 
-`tracing_proc_macro` provides `tracing` integration for the `rustc` compilers `proc_macro` crate.
-It only works in `proc-macro = true` crates and it is nightly only.
+`tracing-proc-macros-ink` provides a working tracing integration for logging from within procedural macros.
+It only works in `proc-macro = true` crates and is nightly only.
 
 Log records are emitted using nightly compiler diagnostics.
 
@@ -15,7 +15,7 @@ This crate requires a nightly compiler.
 
 ## Usage
 
-Every top level function in your `proc_macro` crate should call `tracing_proc_macro::proc_macro_logger_default_setup()` to setup the logger for the `proc_macro` crate.
+Every top level function in your `proc_macro` crate should call `tracing-proc-macros-ink::proc_macro_logger_default_setup()` to setup the logger for the `proc_macro` crate.
 After that normal `tracing` logging can be used in the `proc_macro` crate.
 
 ## Example
@@ -40,15 +40,15 @@ To remove the logging calls entirely from the `proc_macro` crate, you can direct
 ## Custom Logger setup
 
 Providing a customized logging setup is trivial.
-Copy the code from `tracing_proc_macro::proc_macro_logger_default_setup()` into your own crate and modify it to your needs.
+Copy the code from `tracing-proc-macros-ink::proc_macro_logger_default_setup()` into your own crate and modify it to your needs.
 The default `default-setup` feature can be disabled with `no-default-features = true` to avoid enabling unnecessary `tracing-subscriber` features.
 
 ## License
 
 This project is released under either:
 
-- [MIT License](https://github.com/ink-feather-org/tracing-proc-macro-ink-rs/blob/main/LICENSE-MIT)
-- [Apache License (Version 2.0)](https://github.com/ink-feather-org/tracing-proc-macro-ink-rs/blob/main/LICENSE-APACHE)
+- [MIT License](https://github.com/ink-feather-org/tracing-proc-macros-ink-rs/blob/main/LICENSE-MIT)
+- [Apache License (Version 2.0)](https://github.com/ink-feather-org/tracing-proc-macros-ink-rs/blob/main/LICENSE-APACHE)
 
 at your choosing.
 
