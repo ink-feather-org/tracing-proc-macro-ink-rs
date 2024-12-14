@@ -6,6 +6,6 @@ edition = "2024"
 proc-macro = true
 
 [dependencies]
-tracing_proc_macros_rs = { path = "../.." }
+tracing_proc_macros = { path = "../.." }
 tracing = "0.1"
 tracing-subscriber = "0.3"

@@ -2,7 +2,7 @@
 use proc_macro::TokenStream;
 
 use tracing::{debug, debug_span, error, info, info_span, trace, trace_span, warn, warn_span};
-use tracing_proc_macros_rs::proc_macro_logger_default_setup;
+use tracing_proc_macros::proc_macro_logger_default_setup;
 
 #[proc_macro_derive(DebuggableProcMacro)]
 pub fn derive_debuggable_proc_macro(_input: TokenStream) -> TokenStream {

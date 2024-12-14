@@ -1,5 +1,5 @@
 [package]
-name = "tracing_proc_macros_rs"
+name = "tracing_proc_macros"
 edition = "2024"
 description = "Provides `tracing` integration for the `rustc` compilers `proc_macro` crate."
 license = "MIT OR Apache-2.0"
