@@ -83,5 +83,7 @@ pub fn proc_macro_logger_default_setup() {
       )
       .with(tracing_subscriber::EnvFilter::from_default_env())
       .init();
+    #[cfg(feature = "tracing-panic")]
+    std::panic::set_hook(Box::new(tracing_panic::panic_hook));
   });
 }
