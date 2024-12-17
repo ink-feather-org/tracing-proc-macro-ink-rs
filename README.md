@@ -29,7 +29,6 @@ By default logging is turned off.
 To run it on, you need to set the `RUST_LOG` environment variable:
 
 ```sh
-cargo clean -p example_proc_macro
 RUST_LOG=trace cargo build --workspace --bins
 ```
 
