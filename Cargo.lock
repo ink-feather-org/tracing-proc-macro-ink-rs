@@ -336,7 +336,7 @@ dependencies = [
 
 [[package]]
 name = "tracing-proc-macros-ink"
-version = "0.1.4"
+version = "0.1.5"
 dependencies = [
  "tracing",
  "tracing-panic",

@@ -1,5 +1,3 @@
-cargo-features = ["edition2024"]
-
 [package]
 name = "example_proc_macro_user"
 edition = "2024"

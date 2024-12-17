@@ -1,5 +1,6 @@
 #![doc = include_str!("../README.md")]
 #![feature(proc_macro_diagnostic)]
+#![feature(proc_macro_tracked_env)]
 
 extern crate proc_macro;
 
@@ -81,7 +82,10 @@ pub fn proc_macro_logger_default_setup() {
           .with_timer(time::OffsetTime::local_rfc_3339().expect("Could not get local offset!"))
           .with_writer(RustcDiagnosticsMakeWriter),
       )
-      .with(tracing_subscriber::EnvFilter::from_default_env())
+      .with(
+        tracing_subscriber::EnvFilter::builder()
+          .parse_lossy(proc_macro::tracked_env::var("RUST_LOG").unwrap_or_default()),
+      )
       .init();
     #[cfg(feature = "tracing-panic")]
     std::panic::set_hook(Box::new(tracing_panic::panic_hook));
